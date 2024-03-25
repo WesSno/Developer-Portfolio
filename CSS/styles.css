@@ -1,0 +1,828 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Prata&display=swap");
+/* font-family: "Prata", serif; */
+/* font-family: "Inter", sans-serif; */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  min-height: 100vh;
+}
+
+/*************************** NAVIGATION BAR *******************************/
+header {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.navbar {
+  font-family: "Prata", serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.navbar .logo a:hover {
+  color: gold;
+}
+
+.navbar .links {
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  opacity: 0.5;
+  display: flex;
+  gap: 2rem;
+}
+
+.action_btn {
+  font-size: 0.8rem;
+  background-color: gold;
+  padding: 0.5rem 1rem;
+  color: #000000;
+  font-weight: 500;
+  transition: scale 0.2s ease;
+}
+
+.action_btn:hover {
+  scale: 1.05;
+}
+
+.action_btn:active {
+  scale: 0.95;
+}
+
+.navbar .toggle_btn {
+  color: #fff;
+  font-size: 1.5rem;
+  display: none;
+  cursor: pointer;
+}
+
+/************************* DROPDOWN MENU **********************/
+.dropdown_menu {
+  font-family: "Inter", sans-serif;
+  position: absolute;
+  right: 9rem;
+  top: 60px;
+  width: 300px;
+  height: 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  overflow: hidden;
+  z-index: 9999;
+  transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open {
+  height: 225px;
+}
+
+.dropdown_menu li {
+  display: flex;
+  padding: 0.7rem;
+  justify-content: center;
+}
+
+.dropdown_menu li a:hover {
+  color: gold;
+}
+
+.dropdown_menu .action_btn {
+  border-radius: 20px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.dropdown_menu .action_btn:hover {
+  color: #000000
+}
+
+/***************************** PAGE CONTENT *******************/
+
+/************************** INTRODUCTION SECTION *********************/
+#content {
+  position: relative;
+  color: #fff;
+  max-width: 100%;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+#content .intro {
+  width: 500px;
+}
+
+#content .intro h1 {
+  width: 400px;
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin-bottom: 0.8rem;
+}
+
+#content .intro p {
+  font-family: "Inter", sans-serif;
+  font-size: 0.8rem;
+  opacity: 0.5;
+  width: 450px;
+  line-height: 1.1rem;
+}
+
+/**************************** FORTUNE LOGOS ***********************/
+#content .companies_logos .logos {
+  display: flex;
+  gap: 5rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  margin: 0 auto;
+}
+
+#content .companies_logos .logos .group_1,
+#content .companies_logos .logos .group_2 {
+  display: flex;
+  gap: 7.2rem;
+}
+
+#content .companies_logos_mobile {
+  display: none;
+}
+
+/*************************** WEB PAGES ***********************/
+#content .web-pages {
+  display: flex;
+  gap: 9rem;
+  margin-bottom: 4rem;
+}
+
+.web-pages .page_1 img,
+.web-pages .page_2 img {
+  margin-bottom: 1rem;
+}
+
+.web-pages .page_1 .spense_link,
+.web-pages .page_2 .yelp_link {
+  font-weight: 100;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.web-pages .page_1 p,
+.web-pages .page_2 p {
+  font-family: "Inter", sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.1rem;
+  width: 520px;
+  opacity: 0.5;
+}
+
+/*************************** WRITE-UP ************************/
+
+#about {
+  background-color: #303234;
+  width: 100%;
+}
+
+#about .write-up {
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 0;
+  background-color: #303234;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 9.3rem;
+}
+
+#about .write-up .left h3 {
+  font-size: 1.8rem;
+  color: white;
+  width: 390px;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+#about .write-up .left p {
+  color: #fff;
+  opacity: 0.5;
+  font-family: "Inter", sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.1rem;
+  width: 525px;
+}
+
+#about .write-up .right p {
+  color: #fff;
+  opacity: 0.5;
+  font-family: "Inter", sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.1rem;
+  width: 540px;
+}
+
+/************************** CONTACT *************************/
+#in_touch {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#in_touch .interest {
+  color: white;
+  width: 100%;
+  max-width: 50%;
+  padding: 3rem 0;
+}
+
+#in_touch .interest h3 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+
+#in_touch .interest p {
+  font-family: "Inter", sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.1rem;
+  opacity: 0.5;
+  width: 100%;
+  max-width: 400px;
+}
+
+#in_touch .action button {
+  font-family: "Prata", serif;
+  margin-top: 1rem;
+  border: none;
+  padding: 0.5rem 1rem;
+  background-color: gold;
+  cursor: pointer;
+  transition: 0.1s ease;
+}
+
+#in_touch .action button:hover {
+  color: #fff;
+  outline: 2px solid gold;
+  background-color: #000000;
+}
+
+
+/************************* SOCIAL MEDIA LINKS *********************/
+footer {
+  position: relative;
+  background-color: #303234;
+}
+
+footer .social {
+  padding: 1.2rem 0;
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .social .logo_2 a {
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+footer .social .logo_2 a:hover {
+  color: gold;
+}
+
+footer .social .social_links {
+  display: flex;
+  gap: 2rem;
+}
+
+.twitter i,
+.linkedin i,
+.github i {
+  background-color: #fff;
+  border-radius: 50px;
+  padding: 0.5rem;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.twitter i:hover,
+.linkedin i:hover,
+.github i:hover {
+  outline: 1px solid #fff;
+  background-color: #303234;
+  color: white;
+}
+
+/*************************** RESPONSIVENESS ***********************/
+@media only screen and (max-width: 1232px) {
+  .navbar {
+    width: 100%;
+    max-width: 940px;
+  }
+
+  #content {
+    width: 100%;
+    max-width: 940px;
+  }
+
+  #content .companies_logos .logos {
+    gap: 3.5rem;
+  }
+
+  #content .companies_logos .logos .group_1,
+  #content .companies_logos .logos .group_2 {
+    display: flex;
+    gap: 3.5rem;
+  }
+
+  #content .web-pages {
+    display: flex;
+    gap: 2.5rem;
+    margin-bottom: 4rem;
+  }
+
+  .web-pages .page_1 img,
+  .web-pages .page_2 img {
+    width: 450px;
+  }
+
+  .web-pages .page_1 p,
+  .web-pages .page_2 p {
+    font-family: "Inter", sans-serif;
+    font-size: 0.8rem;
+    line-height: 1.1rem;
+    width: 400px;
+    opacity: 0.5;
+  }
+
+  #about .write-up {
+    display: flex;
+    padding: 3rem 0;
+    background-color: #303234;
+    width: 100%;
+    max-width: 940px;
+    margin: 0 auto;
+    gap: 4rem;
+  }
+
+  #about .write-up .left {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  #about .write-up .left p {
+    color: #fff;
+    opacity: 0.5;
+    font-family: "Inter", sans-serif;
+    font-size: 0.8rem;
+    line-height: 1.1rem;
+    width: 405px;
+  }
+
+  #about .write-up .right {
+    width: 100%;
+    max-width: 450px;
+  }
+
+  #about .write-up .right p {
+    color: #fff;
+    opacity: 0.5;
+    font-family: "Inter", sans-serif;
+    font-size: 0.8rem;
+    line-height: 1.1rem;
+    width: 420px;
+  }
+
+  #in_touch {
+    position: relative;
+    width: 100%;
+    max-width: 940px;
+    margin: 0 auto;
+  }
+
+  footer .social {
+    padding: 1.2rem 0;
+    display: flex;
+    width: 100%;
+    max-width: 940px;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 996px) {
+  header {
+    display: flex;
+  }
+
+  .navbar {
+    font-family: "Prata", serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    max-width: 698px;
+    margin: 0 auto;
+  }
+
+  #content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+
+  #content .intro {
+    align-items: center;
+    width: 698px;
+  }
+
+  #content .intro h1 {
+    width: 698px;
+    font-size: 4rem;
+    font-weight: 500;
+    margin-bottom: 0.8rem;
+  }
+
+  #content .intro p {
+    font-family: "Inter", sans-serif;
+    font-size: 1.1rem;
+    opacity: 0.5;
+    width: 650px;
+    line-height: 1.5rem;
+  }
+
+  #content .companies_logos .logos {
+    flex-direction: column;
+    align-items: center;
+    gap: 3.5rem;
+  }
+
+  #content .companies_logos .logos .group_1,
+  #content .companies_logos .logos .group_2 {
+    display: flex;
+    gap: 3.5rem;
+  }
+
+  #content .web-pages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    margin-bottom: 4rem;
+    width: 700px;
+  }
+
+  .web-pages .page_1 img,
+  .web-pages .page_2 img {
+    width: 700px;
+  }
+
+  .web-pages .page_1 p,
+  .web-pages .page_2 p {
+    font-family: "Inter", sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    width: 698px;
+    opacity: 0.5;
+  }
+
+  #about .write-up {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem 0;
+    background-color: #303234;
+    width: 100%;
+    max-width: 698px;
+    margin: 0 auto;
+    gap: 2.3rem;
+  }
+
+  #about .write-up .left h3 {
+    font-size: 2.5rem;
+    width: 650px;
+  }
+
+  #about .write-up .left p,
+  #about .write-up .right p {
+    width: 698px;
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+  }
+
+  #in_touch {
+    position: relative;
+    width: 100%;
+    max-width: 698px;
+    margin: 0 auto;
+  }
+
+  #in_touch .interest {
+    color: white;
+    width: 100%;
+    max-width: 70%;
+    padding: 3rem 0;
+  }
+
+  #in_touch .interest h3 {
+    font-size: 2.3rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+  }
+
+  #in_touch .interest p {
+    font-family: "Inter", sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    opacity: 0.5;
+    width: 100%;
+    max-width: 500px;
+  }
+
+  footer .social {
+    width: 100%;
+    max-width: 698px;
+  }
+
+  .navbar .links,
+  .navbar .action_btn {
+    display: none;
+  }
+
+  .navbar .toggle_btn {
+    display: block;
+  }
+
+  .dropdown_menu {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .dropdown_menu {
+    right: 6rem;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .dropdown_menu {
+    width: unset;
+    right: 3rem;
+    left: 28rem;
+
+  }
+
+  .dropdown_menu .action_btn {
+    width: 97%;
+  }
+}
+
+@media only screen and (max-width: 710px) {
+  .navbar {
+    width: 100%;
+    max-width: 450px;
+  }
+
+  .dropdown_menu {
+    width: unset;
+    left: 12rem;
+    right: 8rem;
+  }
+
+  .dropdown_menu .action_btn {
+    width: 97%;
+  }
+
+  #content .intro {
+    max-width: 450px;
+  }
+
+  #content .intro h1 {
+    max-width: 450px;
+    font-size: 2rem;
+  }
+
+  #content .intro p {
+    font-size: 0.8rem;
+    max-width: 400px;
+  }
+
+  #content .companies_logos .logos .group_1,
+  #content .companies_logos .logos .group_2 {
+    display: flex;
+    gap: 2.5rem;
+  }
+
+  #content .web-pages {
+    gap: 2rem;
+    max-width: 450px;
+  }
+
+  .web-pages .page_1 img,
+  .web-pages .page_2 img {
+    max-width: 450px;
+  }
+
+  .web-pages .page_1 p,
+  .web-pages .page_2 p {
+    font-size: 0.8rem;
+    max-width: 450px;
+  }
+
+  #about .write-up {
+    width: 100%;
+    max-width: 450px;
+  }
+
+  #about .write-up .left h3 {
+    font-size: 1.5rem;
+    width: 450px;
+  }
+
+  #about .write-up .left p,
+  #about .write-up .right p {
+    width: 450px;
+    font-size: 0.8rem;
+  }
+
+  #in_touch {
+    width: 100%;
+    max-width: 450px;
+  }
+
+  #in_touch .interest h3 {
+    font-size: 1.5rem;
+  }
+
+  #in_touch .interest p {
+    font-size: 0.8rem;
+    width: 100%;
+    max-width: 400px;
+  }
+
+  footer .social {
+    width: 100%;
+    max-width: 450px;
+  }
+}
+
+@media only screen and (max-width:600px) {
+  .dropdown_menu {
+    right: 4.5rem;
+  }
+}
+
+@media only screen and (max-width:500px) {
+  .dropdown_menu {
+  right: 1.5rem;
+}
+}
+
+@media only screen and (max-width: 470px) {
+  .navbar {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .dropdown_menu {
+    width: unset;
+    left: 4rem;
+    right: 4rem;
+  }
+
+  #content .intro {
+    max-width: 350px;
+  }
+
+  #content .intro h1 {
+    max-width: 350px;
+    font-size: 1.5rem;
+  }
+
+  #content .intro p {
+    font-size: 0.8rem;
+    max-width: 350px;
+  }
+
+  #content .companies_logos .logos {
+    display: none;
+  }
+
+  #content .companies_logos_mobile {
+    display: block;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin: 0 auto;
+  }
+
+  #content .companies_logos_mobile .logos_mobile .group-1_mobile,
+  #content .companies_logos_mobile .logos_mobile .middle {
+    margin-bottom: 1.5rem;
+  }
+
+  #content .companies_logos_mobile .logos_mobile .group-1_mobile,
+  #content .companies_logos_mobile .logos_mobile .middle,
+  #content .companies_logos_mobile .logos_mobile .group-2_mobile {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #content .web-pages {
+    gap: 2rem;
+    max-width: 350px;
+  }
+
+  .web-pages .page_1 img,
+  .web-pages .page_2 img {
+    max-width: 350px;
+  }
+
+  .web-pages .page_1 p,
+  .web-pages .page_2 p {
+    font-size: 0.8rem;
+    max-width: 350px;
+  }
+
+  #about .write-up {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  #about .write-up .left h3 {
+    font-size: 1.5rem;
+    width: 350px;
+  }
+
+  #about .write-up .left p,
+  #about .write-up .right p {
+    width: 350px;
+    font-size: 0.8rem;
+  }
+
+  #in_touch {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  #in_touch .interest h3 {
+    font-size: 1.5rem;
+  }
+
+  #in_touch .interest p {
+    font-size: 0.8rem;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  footer .social {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  footer .social .social_links {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .twitter i,
+  .linkedin i,
+  .github i {
+    font-size: 0.8rem;
+  }
+
+}
+
+@media only screen and (max-width: 376px) {
+  .dropdown_menu {
+    left: 2rem;
+    right: 2rem;
+  }
+}
