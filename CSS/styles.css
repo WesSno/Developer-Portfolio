@@ -807,6 +807,11 @@ footer .social .social_links {
     max-width: 350px;
   }
 
+  footer .social .logo_2 a {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
   footer .social .social_links {
     display: flex;
     gap: 1.5rem;
